@@ -14,7 +14,8 @@ export class PokedexService {
   
   getPokemon(index:number) : Observable<Pokemon> {
     return this.http.get(`${this.baseUrl}pokemon/${index}`)
-              .map((result:Response) =>  result.json().name);  
+              .map((result:Response) => result.json())
+              .map((res) => {return new Pokemon(index, res.name, res.sprites.front_default)})
   }
 }
 

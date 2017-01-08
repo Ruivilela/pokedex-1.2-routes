@@ -1,3 +1,7 @@
 export class Pokemon {
-    name:string; 
+
+   constructor(
+       public id:number, 
+       public name:string,  
+       public sprite:string){}
 }

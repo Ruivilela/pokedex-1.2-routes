@@ -1,0 +1,10 @@
+.top-buffer {
+    margin-top:5%; 
+}
+
+.pokemon_frame {
+    background-color: grey;
+    color:white;
+    text-align: center;
+    width: 30%;
+}
