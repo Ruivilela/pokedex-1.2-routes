@@ -14,8 +14,16 @@ export class AppComponent {
   constructor(private pokedexService: PokedexService) {}
 
   ngOnInit(){
-    this.pokedexService.getPokemon(1).subscribe(
+   this.findPokemon(1); 
+  }
+
+  findPokemon(index:number){
+    this.pokedexService.getPokemon(index).subscribe(
       result => { this.pokemon = result }
     )
+  }
+
+  onClick(index:number){
+    this.findPokemon(index);
   }
 }
