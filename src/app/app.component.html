@@ -1,26 +1,19 @@
-<div class="top-buffer">
-</div> 
-<div class="row"> 
-  <div class="col-md-2"> 
-  </div> 
-  <div class="pokemon_frame" >
-    <div *ngIf="pokemon != undefined "> 
-      <h3>
-        #{{pokemon.id}}
-      </h3>
-      <img src="{{pokemon.sprite}}">
-      <p>
-        {{pokemon.name}}
-      </p>
-    </div>   
-  </div>
-  <div class="col-md-1">
-  </div> 
-  <div> 
-    <input #myInput type="number" placeholder="insert number">
-    <button (click)="onClick(myInput.value)"> 
-      find pokemon 
-    </button> 
-  </div> 
-</div> 
+<div class="margins">
+</div>
+<div class="row">
+    <div class="col-md-1">
+    </div> 
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <a class="navbar-brand" routerLink="/" routerLinkActive="active"> 
+            Search Pokemons
+        </a>         
+        <a class="navbar-brand" routerLink="/pokedex" routerLinkActive="active"> 
+            Pokedex
+        </a>
+    </nav> 
+</div>
+<div class="spacer">
+</div>      
+<router-outlet></router-outlet>
+
 

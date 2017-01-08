@@ -1,0 +1,23 @@
+<div class="row"> 
+  <div class="col-md-1">
+  </div>
+  <div class="pokemon_frame" >
+    <div *ngIf="pokemon != undefined "> 
+      <h3>
+        #{{pokemon.id}}
+      </h3>
+      <img src="{{pokemon.sprite}}">
+      <p>
+        {{pokemon.name}}
+      </p>
+    </div>   
+  </div>
+  <div class="col-md-1">
+  </div> 
+  <div> 
+    <input #myInput type="number" placeholder="insert number">
+    <button (click)="onClick(myInput.value)"> 
+      find pokemon 
+    </button> 
+  </div> 
+</div> 
